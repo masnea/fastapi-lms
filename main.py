@@ -41,3 +41,8 @@ async def get_user(id: int = Path(..., description="The ID of the user you want 
                    q: str = Query(None, max_length=5)
                    ):
     return {"user": users[id], "query": q}
+
+
+@app.get("")
+async def get_users():
+    return None
